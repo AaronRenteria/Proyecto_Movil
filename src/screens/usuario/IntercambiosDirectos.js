@@ -20,7 +20,7 @@ export default function IntercambiosDirectos() {
                 <Text style={styles.sectionTitle}>Solicitudes Recibidas</Text>
 
                 <View style={styles.card}>
-                    <Text style={styles.user}>Carlos Mendoza</Text>
+                    <Text style={styles.user}>Aaron Renteria</Text>
                     <Text style={styles.label}>Quiere intercambiar:</Text>
                     <Text style={styles.course}>Curso de JavaScript</Text>
 
@@ -41,7 +41,7 @@ export default function IntercambiosDirectos() {
                 </View>
 
                 <View style={styles.card}>
-                    <Text style={styles.user}>Ana Rodríguez</Text>
+                    <Text style={styles.user}>Jesus Lopez</Text>
                     <Text style={styles.label}>Quiere intercambiar:</Text>
                     <Text style={styles.course}>Curso de Python</Text>
 
@@ -62,7 +62,7 @@ export default function IntercambiosDirectos() {
                 </View>
 
                 <View style={styles.card}>
-                    <Text style={styles.user}>Luis Hernández</Text>
+                    <Text style={styles.user}>Adrian</Text>
                     <Text style={styles.label}>Quiere intercambiar:</Text>
                     <Text style={styles.course}>Curso de React Native</Text>
 
