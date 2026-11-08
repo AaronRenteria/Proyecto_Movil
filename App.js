@@ -1,12 +1,29 @@
-import CrearCurso from './screens/usuario/CrearCurso';
-import CrearCursoDos from './screens/usuario/CrearCursoDos';
-import IntercambiosDirectos from './screens/usuario/IntercambiosDirectos';
-import DashboardAdmin from './screens/admin/DashboardAdmin';
-import GestionUsuarios from './screens/admin/GestionUsuarios';
-import ConfiguracionTokens from './screens/usuario/ConfiguracionTokens';
-import ModeracionCursos from './screens/usuario/ModeracionCursos';
-import Reportes from './screens/usuario/Reportes';
+import { StatusBar } from 'expo-status-bar';
+import { useState } from 'react';
+import { StyleSheet, View } from 'react-native';
+import InicioSesion from './src/screens/usuario/InicioSesion';
+import Registro from './src/screens/usuario/Registro';
+
 
 export default function App() {
-  return <Reportes></Reportes>;
+  const [pantalla, setPantalla] = useState('login');
+  return (
+    <View style={styles.container}>
+      {pantalla === 'login' ? (
+        <InicioSesion
+          irRegistro={() => setPantalla('registro')}/>
+      ) : (
+        <Registro
+          irLogin={() => setPantalla('login')}/>
+      )}
+      <StatusBar style="auto" />
+    </View>
+  );
 }
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#F8F7FC',
+  },
+});
+
