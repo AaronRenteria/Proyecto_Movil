@@ -43,18 +43,78 @@ export default function MatrizIntercambios() {
 }
 
 const styles = StyleSheet.create({
-    container: { flex: 1, backgroundColor: '#F8F7FC' },
-    content: { padding: 20, paddingTop: 40 },
-    title: { fontSize: 24, fontWeight: 'bold', color: '#252238', marginBottom: 4 },
-    sub: { fontSize: 14, color: '#898598', marginBottom: 20 },
-    card: { backgroundColor: '#FFFFFF', borderColor: '#E8E5EF', borderWidth: 1, borderRadius: 8, padding: 14, gap: 4 },
-    cardTop: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 },
-    user: { color: '#252238', fontSize: 16, fontWeight: 'bold' },
-    badgeOk: { color: '#1F9D6B', fontSize: 12, fontWeight: 'bold' },
-    badgeWait: { color: '#D98A0B', fontSize: 12, fontWeight: 'bold' },
-    label: { color: '#898598', fontSize: 12, marginTop: 4 },
-    course: { color: '#393548', fontSize: 14, fontWeight: '600' },
-    btn: { backgroundColor: '#704DE8', padding: 12, borderRadius: 8, alignItems: 'center', marginTop: 10 },
-    btnText: { color: '#FFF', fontWeight: 'bold' },
-    empty: { color: '#898598', textAlign: 'center', marginTop: 30 },
+    container: { 
+        flex: 1, 
+        backgroundColor: '#0F172A' // Fondo principal oscuro
+    },
+    content: { 
+        padding: 20, 
+        paddingTop: 40 
+    },
+    title: { 
+        fontSize: 24, 
+        fontWeight: 'bold', 
+        color: '#FFFFFF', 
+        marginBottom: 4 
+    },
+    sub: { 
+        fontSize: 14, 
+        color: '#94A3B8', 
+        marginBottom: 20 
+    },
+    card: { 
+        backgroundColor: '#1E293B', 
+        borderColor: '#334155', 
+        borderWidth: 1, 
+        borderRadius: 8, 
+        padding: 16, 
+        gap: 4 
+    },
+    cardTop: { 
+        flexDirection: 'row', 
+        justifyContent: 'space-between', 
+        alignItems: 'center', 
+        marginBottom: 6 
+    },
+    user: { 
+        color: '#FFFFFF', 
+        fontSize: 16, 
+        fontWeight: 'bold' 
+    },
+    badgeOk: { 
+        color: '#10B981', // Verde esmeralda adaptado para modo oscuro
+        fontSize: 12, 
+        fontWeight: 'bold' 
+    },
+    badgeWait: { 
+        color: '#F59E0B', // Amarillo / ámbar adaptado para modo oscuro
+        fontSize: 12, 
+        fontWeight: 'bold' 
+    },
+    label: { 
+        color: '#94A3B8', 
+        fontSize: 12, 
+        marginTop: 4 
+    },
+    course: { 
+        color: '#E2E8F0', 
+        fontSize: 14, 
+        fontWeight: '600' 
+    },
+    btn: { 
+        backgroundColor: '#4F46E5', 
+        padding: 12, 
+        borderRadius: 8, 
+        alignItems: 'center', 
+        marginTop: 10 
+    },
+    btnText: { 
+        color: '#FFFFFF', 
+        fontWeight: 'bold' 
+    },
+    empty: { 
+        color: '#94A3B8', 
+        textAlign: 'center', 
+        marginTop: 30 
+    },
 });

@@ -22,23 +22,23 @@ export default function ConfiguracionCuenta() {
 
                     <View style={styles.form}>
                         <Text style={styles.label}>Nombre completo</Text>
-                        <TextInput style={styles.input} placeholder="Ej. Lucía Torres" placeholderTextColor="#9993A8" editable={false} />
+                        <TextInput style={styles.input} placeholder="Ej. Lucía Torres" placeholderTextColor="#64748B" editable={false} />
 
                         <Text style={styles.label}>Correo electrónico</Text>
-                        <TextInput style={styles.input} placeholder="Ej. lucia.torres@email.com" placeholderTextColor="#9993A8" keyboardType="email-address" editable={false} />
+                        <TextInput style={styles.input} placeholder="Ej. lucia.torres@email.com" placeholderTextColor="#64748B" keyboardType="email-address" editable={false} />
 
                         <Text style={styles.label}>Nueva contraseña</Text>
-                        <TextInput style={styles.input} placeholder="Mínimo 8 caracteres" placeholderTextColor="#9993A8" secureTextEntry editable={false} />
+                        <TextInput style={styles.input} placeholder="Mínimo 8 caracteres" placeholderTextColor="#64748B" secureTextEntry editable={false} />
 
                         <Text style={styles.label}>Confirmar contraseña</Text>
-                        <TextInput style={styles.input} placeholder="Repite tu contraseña" placeholderTextColor="#9993A8" secureTextEntry editable={false} />
+                        <TextInput style={styles.input} placeholder="Repite tu contraseña" placeholderTextColor="#64748B" secureTextEntry editable={false} />
 
-                        {/* Preferencias con Switch (valor fijo porque solo es interfaz) */}
+                        {/* Preferencias con Switch */}
                         <View style={styles.switchRow}>
                             <Text style={styles.switchText}>Notificaciones</Text>
                             <Switch
-                                trackColor={{ false: '#E8E5EF', true: '#704DE8' }}
-                                thumbColor="#FFF"
+                                trackColor={{ false: '#334155', true: '#4F46E5' }}
+                                thumbColor="#FFFFFF"
                                 value={true}
                                 onValueChange={() => {}}
                             />
@@ -46,8 +46,8 @@ export default function ConfiguracionCuenta() {
                         <View style={styles.switchRow}>
                             <Text style={styles.switchText}>Perfil visible para la comunidad</Text>
                             <Switch
-                                trackColor={{ false: '#E8E5EF', true: '#704DE8' }}
-                                thumbColor="#FFF"
+                                trackColor={{ false: '#334155', true: '#4F46E5' }}
+                                thumbColor="#FFFFFF"
                                 value={false}
                                 onValueChange={() => {}}
                             />
@@ -67,17 +67,75 @@ export default function ConfiguracionCuenta() {
 }
 
 const styles = StyleSheet.create({
-    container: { flex: 1, backgroundColor: '#F8F7FC' },
-    content: { padding: 20, paddingTop: 40 },
-    title: { fontSize: 24, fontWeight: 'bold', color: '#252238', marginBottom: 4 },
-    sub: { fontSize: 14, color: '#898598', marginBottom: 20 },
-    form: { gap: 12 },
-    label: { color: '#393548', fontSize: 14, fontWeight: '600' },
-    input: { backgroundColor: '#FFFFFF', borderColor: '#E8E5EF', borderWidth: 1, borderRadius: 8, padding: 12, color: '#393548' },
-    switchRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', backgroundColor: '#FFFFFF', borderColor: '#E8E5EF', borderWidth: 1, borderRadius: 8, padding: 12 },
-    switchText: { color: '#393548', fontSize: 14 },
-    btn: { backgroundColor: '#704DE8', padding: 14, borderRadius: 8, alignItems: 'center', marginTop: 10 },
-    btnText: { color: '#FFF', fontWeight: 'bold' },
-    btnOutline: { borderColor: '#D64545', borderWidth: 1, padding: 14, borderRadius: 8, alignItems: 'center' },
-    btnOutlineText: { color: '#D64545', fontWeight: 'bold' },
+    container: { 
+        flex: 1, 
+        backgroundColor: '#0F172A' // Fondo principal oscuro
+    },
+    content: { 
+        padding: 20, 
+        paddingTop: 40 
+    },
+    title: { 
+        fontSize: 24, 
+        fontWeight: 'bold', 
+        color: '#FFFFFF', 
+        marginBottom: 4 
+    },
+    sub: { 
+        fontSize: 14, 
+        color: '#94A3B8', 
+        marginBottom: 20 
+    },
+    form: { 
+        gap: 12 
+    },
+    label: { 
+        color: '#E2E8F0', 
+        fontSize: 14, 
+        fontWeight: '600' 
+    },
+    input: { 
+        backgroundColor: '#1E293B', 
+        borderColor: '#334155', 
+        borderWidth: 1, 
+        borderRadius: 8, 
+        padding: 12, 
+        color: '#FFFFFF' 
+    },
+    switchRow: { 
+        flexDirection: 'row', 
+        justifyContent: 'space-between', 
+        alignItems: 'center', 
+        backgroundColor: '#1E293B', 
+        borderColor: '#334155', 
+        borderWidth: 1, 
+        borderRadius: 8, 
+        padding: 12 
+    },
+    switchText: { 
+        color: '#E2E8F0', 
+        fontSize: 14 
+    },
+    btn: { 
+        backgroundColor: '#4F46E5', 
+        padding: 14, 
+        borderRadius: 8, 
+        alignItems: 'center', 
+        marginTop: 10 
+    },
+    btnText: { 
+        color: '#FFFFFF', 
+        fontWeight: 'bold' 
+    },
+    btnOutline: { 
+        borderColor: '#EF4444', // Rojo adaptado para modo oscuro
+        borderWidth: 1, 
+        padding: 14, 
+        borderRadius: 8, 
+        alignItems: 'center' 
+    },
+    btnOutlineText: { 
+        color: '#EF4444', 
+        fontWeight: 'bold' 
+    },
 });

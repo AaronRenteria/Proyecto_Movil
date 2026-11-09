@@ -1,7 +1,6 @@
 import React from 'react';
 import { SafeAreaView, SectionList, View, Text, StyleSheet } from 'react-native';
 
-// Dos secciones: créditos ganados y créditos gastados
 const movimientos = [
     {
         title: 'Créditos ganados',
@@ -58,17 +57,77 @@ export default function BilleteraCreditos() {
 }
 
 const styles = StyleSheet.create({
-    container: { flex: 1, backgroundColor: '#F8F7FC' },
-    content: { padding: 20, paddingTop: 40 },
-    title: { fontSize: 24, fontWeight: 'bold', color: '#252238', marginBottom: 4 },
-    sub: { fontSize: 14, color: '#898598', marginBottom: 20 },
-    balanceCard: { backgroundColor: '#704DE8', borderRadius: 8, padding: 20, marginBottom: 10 },
-    balanceLabel: { color: '#EEE9FC', fontSize: 14 },
-    balanceValue: { color: '#FFF', fontSize: 28, fontWeight: 'bold', marginTop: 4 },
-    sectionTitle: { color: '#252238', fontSize: 16, fontWeight: 'bold', marginTop: 16, marginBottom: 10 },
-    row: { flexDirection: 'row', alignItems: 'center', backgroundColor: '#FFFFFF', borderColor: '#E8E5EF', borderWidth: 1, borderRadius: 8, padding: 12 },
-    rowTitle: { color: '#252238', fontSize: 14, fontWeight: '600' },
-    rowDate: { color: '#898598', fontSize: 12, marginTop: 2 },
-    plus: { color: '#1F9D6B', fontSize: 15, fontWeight: 'bold' },
-    minus: { color: '#D64545', fontSize: 15, fontWeight: 'bold' },
+    container: { 
+        flex: 1, 
+        backgroundColor: '#0F172A' // Fondo principal oscuro
+    },
+    content: { 
+        padding: 20, 
+        paddingTop: 40 
+    },
+    title: { 
+        fontSize: 24, 
+        fontWeight: 'bold', 
+        color: '#FFFFFF', 
+        marginBottom: 4 
+    },
+    sub: { 
+        fontSize: 14, 
+        color: '#94A3B8', 
+        marginBottom: 20 
+    },
+    balanceCard: { 
+        backgroundColor: '#1E293B', 
+        borderColor: '#334155',
+        borderWidth: 1,
+        borderRadius: 8, 
+        padding: 20, 
+        marginBottom: 10 
+    },
+    balanceLabel: { 
+        color: '#94A3B8', 
+        fontSize: 14 
+    },
+    balanceValue: { 
+        color: '#818CF8', 
+        fontSize: 28, 
+        fontWeight: 'bold', 
+        marginTop: 4 
+    },
+    sectionTitle: { 
+        color: '#FFFFFF', 
+        fontSize: 18, 
+        fontWeight: 'bold', 
+        marginTop: 16, 
+        marginBottom: 10 
+    },
+    row: { 
+        flexDirection: 'row', 
+        alignItems: 'center', 
+        backgroundColor: '#1E293B', 
+        borderColor: '#334155', 
+        borderWidth: 1, 
+        borderRadius: 8, 
+        padding: 15 
+    },
+    rowTitle: { 
+        color: '#FFFFFF', 
+        fontSize: 14, 
+        fontWeight: '600' 
+    },
+    rowDate: { 
+        color: '#94A3B8', 
+        fontSize: 12, 
+        marginTop: 2 
+    },
+    plus: { 
+        color: '#10B981', // Verde esmeralda adaptado para modo oscuro
+        fontSize: 15, 
+        fontWeight: 'bold' 
+    },
+    minus: { 
+        color: '#EF4444', // Rojo adaptado para modo oscuro
+        fontSize: 15, 
+        fontWeight: 'bold' 
+    },
 });

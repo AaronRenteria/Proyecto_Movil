@@ -26,6 +26,7 @@ export default function HomeCatalogo() {
                 contentContainerStyle={styles.content}
                 ListHeaderComponent={
                     <View>
+                        <Text style={styles.step}>Plataforma Nexo</Text>
                         <Text style={styles.title}>Hola, Lucía 👋</Text>
                         <Text style={styles.sub}>¿Qué quieres aprender hoy?</Text>
 
@@ -39,6 +40,7 @@ export default function HomeCatalogo() {
                             data={categorias}
                             keyExtractor={item => item.id}
                             horizontal={true}
+                            showsHorizontalScrollIndicator={false}
                             ItemSeparatorComponent={() => <View style={{ width: 8 }} />}
                             renderItem={({ item }) => (
                                 <Pressable style={styles.catChip}>
@@ -47,7 +49,7 @@ export default function HomeCatalogo() {
                             )}
                         />
 
-                        <Text style={[styles.section, { marginTop: 20 }]}>Cursos disponibles</Text>
+                        <Text style={[styles.section, { marginTop: 25 }]}>Cursos disponibles</Text>
                     </View>
                 }
                 renderItem={({ item }) => (
@@ -57,7 +59,7 @@ export default function HomeCatalogo() {
                         </View>
                         <View style={{ flex: 1 }}>
                             <Text style={styles.cardTitle}>{item.titulo}</Text>
-                            <Text style={styles.cardSub}>{item.instructor} - {item.duracion}</Text>
+                            <Text style={styles.cardSub}>{item.instructor} • {item.duracion}</Text>
                         </View>
                         <Text style={styles.price}>{item.creditos} cr.</Text>
                     </Pressable>
@@ -69,20 +71,103 @@ export default function HomeCatalogo() {
 }
 
 const styles = StyleSheet.create({
-    container: { flex: 1, backgroundColor: '#F8F7FC' },
-    content: { padding: 20, paddingTop: 40 },
-    title: { fontSize: 24, fontWeight: 'bold', color: '#252238', marginBottom: 4 },
-    sub: { fontSize: 14, color: '#898598', marginBottom: 20 },
-    creditCard: { backgroundColor: '#704DE8', borderRadius: 8, padding: 20, marginBottom: 20 },
-    creditLabel: { color: '#EEE9FC', fontSize: 14 },
-    creditValue: { color: '#FFF', fontSize: 28, fontWeight: 'bold', marginTop: 4 },
-    section: { color: '#252238', fontSize: 16, fontWeight: 'bold', marginBottom: 10 },
-    catChip: { backgroundColor: '#FFFFFF', borderColor: '#E8E5EF', borderWidth: 1, borderRadius: 8, paddingVertical: 8, paddingHorizontal: 16 },
-    catText: { color: '#704DE8', fontWeight: '600' },
-    card: { flexDirection: 'row', alignItems: 'center', gap: 12, backgroundColor: '#FFFFFF', borderColor: '#E8E5EF', borderWidth: 1, borderRadius: 8, padding: 12 },
-    thumb: { width: 48, height: 48, borderRadius: 8, backgroundColor: '#704DE8', alignItems: 'center', justifyContent: 'center' },
-    thumbText: { color: '#FFF', fontWeight: 'bold', fontSize: 16 },
-    cardTitle: { color: '#252238', fontSize: 14, fontWeight: '600' },
-    cardSub: { color: '#898598', fontSize: 12, marginTop: 2 },
-    price: { color: '#704DE8', fontWeight: 'bold' },
+    container: { 
+        flex: 1, 
+        backgroundColor: '#0F172A' // Fondo principal oscuro
+    },
+    content: { 
+        padding: 20, 
+        paddingTop: 40 
+    },
+    step: {
+        fontSize: 12,
+        color: '#818CF8',
+        fontWeight: 'bold',
+        marginBottom: 4
+    },
+    title: { 
+        fontSize: 24, 
+        fontWeight: 'bold', 
+        color: '#FFFFFF', 
+        marginBottom: 4 
+    },
+    sub: { 
+        fontSize: 14, 
+        color: '#94A3B8', 
+        marginBottom: 20 
+    },
+    creditCard: { 
+        backgroundColor: '#1E293B', 
+        borderColor: '#334155',
+        borderWidth: 1,
+        borderRadius: 8, 
+        padding: 20, 
+        marginBottom: 20 
+    },
+    creditLabel: { 
+        color: '#94A3B8', 
+        fontSize: 14 
+    },
+    creditValue: { 
+        color: '#818CF8', 
+        fontSize: 28, 
+        fontWeight: 'bold', 
+        marginTop: 4 
+    },
+    section: { 
+        color: '#FFFFFF', 
+        fontSize: 18, 
+        fontWeight: 'bold', 
+        marginBottom: 12 
+    },
+    catChip: { 
+        backgroundColor: '#1E293B', 
+        borderColor: '#334155', 
+        borderWidth: 1, 
+        borderRadius: 8, 
+        paddingVertical: 10, 
+        paddingHorizontal: 16 
+    },
+    catText: { 
+        color: '#818CF8', 
+        fontWeight: '600' 
+    },
+    card: { 
+        flexDirection: 'row', 
+        alignItems: 'center', 
+        gap: 12, 
+        backgroundColor: '#1E293B', 
+        borderColor: '#334155', 
+        borderWidth: 1, 
+        borderRadius: 8, 
+        padding: 15 
+    },
+    thumb: { 
+        width: 48, 
+        height: 48, 
+        borderRadius: 8, 
+        backgroundColor: '#4F46E5', 
+        alignItems: 'center', 
+        justifyContent: 'center' 
+    },
+    thumbText: { 
+        color: '#FFFFFF', 
+        fontWeight: 'bold', 
+        fontSize: 16 
+    },
+    cardTitle: { 
+        color: '#FFFFFF', 
+        fontSize: 14, 
+        fontWeight: '600' 
+    },
+    cardSub: { 
+        color: '#94A3B8', 
+        fontSize: 12, 
+        marginTop: 4 
+    },
+    price: { 
+        color: '#818CF8', 
+        fontWeight: 'bold',
+        fontSize: 14
+    },
 });
