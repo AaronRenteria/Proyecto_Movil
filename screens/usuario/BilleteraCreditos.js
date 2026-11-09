@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { SafeAreaView, SectionList, View, Text, StyleSheet } from 'react-native';
 
@@ -30,6 +31,7 @@ export default function BilleteraCreditos() {
                     <View>
                         <Text style={styles.title}>Mi billetera</Text>
                         <Text style={styles.sub}>Consulta los créditos que ganaste y gastaste.</Text>
+
                         <View style={styles.balanceCard}>
                             <Text style={styles.balanceLabel}>Créditos disponibles</Text>
                             <Text style={styles.balanceValue}>120 créditos</Text>
@@ -45,6 +47,7 @@ export default function BilleteraCreditos() {
                             <Text style={styles.rowTitle}>{item.titulo}</Text>
                             <Text style={styles.rowDate}>{item.fecha}</Text>
                         </View>
+
                         <Text style={item.tipo === 'ganado' ? styles.plus : styles.minus}>
                             {item.tipo === 'ganado' ? '+' : '-'}{item.cantidad} cr.
                         </Text>
@@ -57,6 +60,7 @@ export default function BilleteraCreditos() {
 }
 
 const styles = StyleSheet.create({
+<<<<<<< HEAD
     container: { 
         flex: 1, 
         backgroundColor: '#0F172A' // Fondo principal oscuro
@@ -131,3 +135,91 @@ const styles = StyleSheet.create({
         fontWeight: 'bold' 
     },
 });
+=======
+
+    container: {
+        flex: 1,
+        backgroundColor: '#0F172A'
+    },
+
+    content: {
+        padding: 20,
+        paddingTop: 40
+    },
+
+    title: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        color: '#FFFFFF',
+        marginBottom: 4
+    },
+
+    sub: {
+        fontSize: 14,
+        color: '#94A3B8',
+        marginBottom: 20
+    },
+
+    balanceCard: {
+        backgroundColor: '#4F46E5',
+        borderRadius: 8,
+        padding: 20,
+        marginBottom: 10
+    },
+
+    balanceLabel: {
+        color: '#E0E7FF',
+        fontSize: 14
+    },
+
+    balanceValue: {
+        color: '#FFFFFF',
+        fontSize: 28,
+        fontWeight: 'bold',
+        marginTop: 4
+    },
+
+    sectionTitle: {
+        color: '#FFFFFF',
+        fontSize: 16,
+        fontWeight: 'bold',
+        marginTop: 16,
+        marginBottom: 10
+    },
+
+    row: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: '#1E293B',
+        borderColor: '#334155',
+        borderWidth: 1,
+        borderRadius: 8,
+        padding: 12
+    },
+
+    rowTitle: {
+        color: '#FFFFFF',
+        fontSize: 14,
+        fontWeight: '600'
+    },
+
+    rowDate: {
+        color: '#94A3B8',
+        fontSize: 12,
+        marginTop: 2
+    },
+
+    plus: {
+        color: '#34D399',
+        fontSize: 15,
+        fontWeight: 'bold'
+    },
+
+    minus: {
+        color: '#F87171',
+        fontSize: 15,
+        fontWeight: 'bold'
+    }
+
+});
+>>>>>>> 422d5aa (Proyecto acabado)
